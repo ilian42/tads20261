@@ -1,3 +1,3 @@
-from functions.data import download_history
+from functions.plot import create_plot
 
-download_history('BBAS3.SA')
+create_plot('BBAS3.SA')
