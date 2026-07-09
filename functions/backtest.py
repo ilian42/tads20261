@@ -16,8 +16,8 @@ def ma_strategy(ticker:str, ma_short:int = 9, ma_long:int = 72) -> pd.DataFrame:
             .get('Close')
         )
 
-    mas = vbt.MA.run(price, window = 9)
-    mal = vbt.MA.run(price, window = 72)
+    mas = vbt.MA.run(price, window = ma_short)
+    mal = vbt.MA.run(price, window = ma_long)
 
     entries = mas.ma_crossed_above(mal)
     exits = mas.ma_crossed_below(mal)
